@@ -1,0 +1,1 @@
+perkakas = ['palu', 'paku']
