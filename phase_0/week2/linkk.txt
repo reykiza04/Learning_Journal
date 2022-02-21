@@ -1,0 +1,3 @@
+https://colab.research.google.com/drive/1zbZJn5kYiQ2V2jtQpjV5RpewMdjt8bpc?usp=sharing
+https://stackoverflow.com/questions/50158333/how-do-i-enforce-a-square-grid-in-matplotlib
+colah w2d1pm
