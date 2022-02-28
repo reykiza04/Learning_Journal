@@ -1,3 +1,15 @@
-https://colab.research.google.com/drive/1zbZJn5kYiQ2V2jtQpjV5RpewMdjt8bpc?usp=sharing
+https://colab.research.google.com/drive/1zbZJn5kYiQ2V2jtQpjV5RpewMdjt8bpc?usp=sharing d1
 https://stackoverflow.com/questions/50158333/how-do-i-enforce-a-square-grid-in-matplotlib
+https://colab.research.google.com/drive/1Ur2wIaAHPJFRa5XqidVXRxOq9e_XZnCj?usp=sharing d2
+https://colab.research.google.com/drive/1vuI6mr4c-f0jPq9A-lPoxw_Bghw3G8do?usp=sharing materi tambahan untuk mtr awal sampe akhir di w2
+
 colah w2d1pm
+
+LC di geser ke selasa pagi,
+
+
+eigent decomposition
+1. buat matriks covariance
+2. cari letak eigen_value terbesar
+	letak indeks_max
+3. cari eigen vector terbesar di posisi index max

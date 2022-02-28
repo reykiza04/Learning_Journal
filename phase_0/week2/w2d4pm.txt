@@ -1,0 +1,398 @@
+SQL 
+kita membutuhkan data untuk berkerja
+saat berkerja tidak lagi dalam csv nanti dalam data base
+
+exel mirip seperti database
+sheet mirip seperti table
+baris juga ada bariss
+
+tapi exel terbatas makanya kita pakai database untuk menyimpan data
+software yang di butuhkan juga berbeda
+database = sekumpulan banyak data
+
+
+ada primery key di pandas seperti index ( sesuatu yang membedakan 1 dan lainnya
+
+foreign key adalah primery key yang ada di tabel lain
+
+kalo kita mau merge harus ada foregn key untuk join table
+di tabel bisa ada beberapa foregn key
+biasanya id
+
+database berbeda"
+SQLite
+MySQL
+PostgreSQL
+
+kita akan lakukan pada maria db
+
+SQL Command
+ada 
+DDL data definiton language
+DQL data query language
+DML data manipulation language
+DCL data control language (yg ini blm di pelajari)
+
+di bawah adalah kode dari https://sqliteonline.com/
+
+DDL===============================
+
+-- Membuat tabel teacteachers
+CREATE TABLE teachers (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    first_name varchar(25) NOT NULL,
+    last_name varchar(50),
+    school varchar(50) NOT NULL,
+    hire_date date,
+    salary numeric
+    );
+    
+-- Menambahkan column Age
+ALTER TABLE teachers ADD age INT; 
+
+--  Menghapus kolom Age
+ALTER TABLE teachers DROP COLUMN age;
+
+-- Mengganti tipe data salaryteachers
+ALTER TABLE teachers MODIFY COLUMN salary Int;
+
+-- Mengganti nama tabel
+ALTER TABLE teachers RENAME TO guru;
+ALTER TABLE guru RENAME TO teachers;
+
+-- mengisi tabel insert data
+INSERT INTO teachers (id,first_name, last_name, school, hire_date, salary)
+    VALUES (1,'Janet', 'Smith', 'MIT', '2011-10-30', 36200),
+           (2,'Lee', 'Reynolds', 'MIT', '1993-05-22', 65000),
+           (3,'Samuel', 'Cole', 'Cambridge University', '2005-08-01', 43500),
+           (4,'Samantha', 'Bush', 'Cambridge University', '2011-10-30', 36200),
+           (5,'Betty', 'Diaz', 'Cambridge University', '2005-08-30', 43500),
+           (6,'Kathleen', 'Roush', 'MIT', '2010-10-22', 38500),
+           (7,'James', 'Diaz', 'Harvard University', '2003-07-18', 61000),
+           (8,'Zack', 'Smith', 'Harvard University', '2000-12-29', 55500),
+           (9,'Luis', 'Gonzales', 'Standford University', '2002-12-01', 50000),
+           (10,'Frank', 'Abbers', 'Standford University', '1999-01-30', 66000);
+
+-- mengecek data yang di masukanteachers
+SELECT * FROM teachers;
+
+
+-- menghapus data yang ada di tabelteachers
+TRUNCATE TABLE teachers;
+SELECT * FROM teachers;
+
+-- Menghapus tabelteachers
+DROP TABLE teachers;
+
+
+DML==========================================
+-- Membuat tabel teacteachers
+CREATE TABLE teachers (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    first_name varchar(25) NOT NULL,
+    last_name varchar(50),
+    school varchar(50) NOT NULL,
+    hire_date date,
+    salary numeric
+    );
+    
+-- mengisi tabel insert data
+INSERT INTO teachers (id,first_name, last_name, school, hire_date, salary)
+    VALUES (1,'Janet', 'Smith', 'MIT', '2011-10-30', 36200),
+           (2,'Lee', 'Reynolds', 'MIT', '1993-05-22', 65000),
+           (3,'Samuel', 'Cole', 'Cambridge University', '2005-08-01', 43500),
+           (4,'Samantha', 'Bush', 'Cambridge University', '2011-10-30', 36200),
+           (5,'Betty', 'Diaz', 'Cambridge University', '2005-08-30', 43500),
+           (6,'Kathleen', 'Roush', 'MIT', '2010-10-22', 38500),
+           (7,'James', 'Diaz', 'Harvard University', '2003-07-18', 61000),
+           (8,'Zack', 'Smith', 'Harvard University', '2000-12-29', 55500),
+           (9,'Luis', 'Gonzales', 'Standford University', '2002-12-01', 50000),
+           (10,'Frank', 'Abbers', 'Standford University', '1999-01-30', 66000);
+
+
+-- hapus data dengan id=10teachers
+DELETE FROM teachers WHERE id=10;
+SELECT*FROM teachers;
+
+-- sekarang kita insert 5 data baru
+INSERT INTO teachers (first_name, last_name, school, hire_date, salary)
+    VALUES ('Samuel', 'Abbers', 'Standford University', '2006-01-30', 32000),
+           ('Jessica', 'Abbers', 'Standford University', '2005-01-30', 33000),
+           ('Tom', 'Massi', 'Harvard University', '1999-09-09', 39500),
+           ('Esteban', 'Brown', 'MIT', '2007-01-30', 36000),
+           ('Carlos', 'Alonso', 'Standford University', '2001-01-30', 44000);
+           
+-- yang no 10 tidak akan terisi kembali lalu data baru akan start dari 11 karena sifat auto ini tidak akan mengisi yang sudh pernah di pakai           
+
+SELECT*FROM teachers;
+
+
+
+DQL======================================================
+# menampilkan semua baris dan kolomteachers
+SELECT*FROM teachers;
+
+# menampilkan yang di inginkan sajateachers
+SELECT first_name, school, salary
+FROM teachers;
+
+# menghitung jumlah guru
+SELECT COUNT(*) FROM teachers;
+
+# di pake alias jg bisateachers
+
+SELECT COUNT(*) as 'jumlah guru' FROM teachers;
+
+# mengurutkan guru berdasarkan first nmefirst_name z-a
+SELECT first_name, school, salary
+FROM teachers
+order by first_name DESC;
+
+# mengurutkan guru berdasarkan first nmefirst_name a-z
+SELECT first_name, school, salary
+FROM teachers
+order by first_name ASC;
+
+
+# menampilkan guru yang mengajar di MITteachers
+SELECT*
+FROM teachers
+WHERE school='MIT';
+
+
+# menampilkan guru yang mengajar di MIT gaji di atas 40k
+SELECT*
+FROM teachers
+WHERE school='MIT' and salary>40000;
+
+# MENAMPILKAN GURU YANG MENGAJAR DI MIT ATAU HAVARD
+SELECT*
+FROM teachers
+WHERE school='MIT' OR school='Harvard University';
+
+# MENAMPILKAN GURU YANG MENGAJAR DI MIT ATAU HAVARD dengan gaji di atas 40k
+
+SELECT*
+FROM teachers
+WHERE school='MIT' OR school='Harvard University' and salary>40000;
+
+
+# bisa juga menggunakan IN jika males banyak OR OR nyateachers
+SELECT*
+from teachers
+WHERE school IN ('MIT', 'Harvard University') and salary>40000;
+
+
+# bisa juga menggunakan IN jika males banyak OR OR ny jika kita mau case sensitiv tambahkan binary contoh pada mit
+SELECT*
+from teachers
+WHERE BINARY school IN ('MiT', 'Harvard University') and salary>40000;
+
+# mencari uniqe schoolteachers ini nampil semua
+SELECT school
+from teachers;
+
+
+# mencari uniqe schoolteachers ini nampil unik saja
+SELECT DISTINCT school
+from teachers;
+
+
+# mencari uniqe schoolteachers ini nampil unik saja dan di hitung
+SELECT count(DISTINCT school)
+from teachers;
+
+-- tampilkan semua dosen cambridge dengan salari di atas 45000
+SELECT*
+from teachers
+WHERE BINARY school IN ('Cambridge University') and salary>45000;
+
+
+=================================================================
+
+kelas siang
+
+CREATE TABLE courses (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name varchar(20),
+    teachers_id INT,
+    total_students INT
+    );
+    
+    INSERT INTO courses (name, teachers_id, total_students)
+    VALUES  ('Calculus', 2, 20),
+            ('Physics', 2, 10),
+            ('Calculus', 1, 30),
+            ('Computer Science', 1, 20),
+            ('Politic', 4, 15),
+            ('Algebra', 2, 10),
+            ('Algebra', 13, 30),
+            ('Computer Science', 10, 35),
+            ('Life Science', 11, 20),
+            ('Chemistry', 9, 22),
+            ('Chemistry', 8, 16),
+            ('Calculus', 5, 19),
+            ('Politic', 4, 17),
+            ('Biology', 6, 22),
+            ('Physics', 3, 29),
+            ('Biology', 8, 28),
+            ('Calculus', 12, 34),
+            ('Physics', 13, 34),
+            ('Biology', 14, 25),
+            ('Calculus', 15, 20);
+TRUNCATE TABLE teachers;            
+INSERT INTO teachers (id,first_name, last_name, school, hire_date, salary)
+    VALUES (1,'Janet', 'Smith', 'MIT', '2011-10-30', 36200),
+           (2,'Lee', 'Reynolds', 'MIT', '1993-05-22', 65000),
+           (3,'Samuel', 'Cole', 'Cambridge University', '2005-08-01', 43500),
+           (4,'Samantha', 'Bush', 'Cambridge University', '2011-10-30', 36200),
+           (5,'Betty', 'Diaz', 'Cambridge University', '2005-08-30', 43500),
+           (6,'Kathleen', 'Roush', 'MIT', '2010-10-22', 38500),
+           (7,'James', 'Diaz', 'Harvard University', '2003-07-18', 61000),
+           (8,'Zack', 'Smith', 'Harvard University', '2000-12-29', 55500),
+           (9,'Luis', 'Gonzales', 'Standford University', '2002-12-01', 50000),
+           (10,'Frank', 'Abbers', 'Standford University', '1999-01-30', 66000);
+           
+INSERT INTO teachers (first_name, last_name, school, hire_date, salary)
+    VALUES ('Samuel', 'Abbers', 'Standford University', '2006-01-30', 32000),
+           ('Jessica', 'Abbers', 'Standford University', '2005-01-30', 33000),
+           ('Tom', 'Massi', 'Harvard University', '1999-09-09', 39500),
+           ('Esteban', 'Brown', 'MIT', '2007-01-30', 36000),
+           ('Carlos', 'Alonso', 'Standford University', '2001-01-30', 44000);
+
+SELECT COUNT(*) from teachers;
+
+SELECT COUNT(*) from courses;
+
+======== DQL PM
+# mengecek jumlah data di table teteachers
+SELECT COUNT(*)
+from teachers;
+
+-- mengecek total gaji dosen yang mengahar di MIT
+select *
+from teachers
+WHERE school='MIT';
+
+-- mengecek total gaji dosen mit
+select sum(salary)
+from teachers
+WHERE school='MIT';
+
+-- mengecek rata" gaji mit
+select avg(salary)
+from teachers
+WHERE school='MIT';
+
+-- mengecek rata" gaji mit ceil ke atas floor kebawah pembulatanya
+select ceil(avg(salary))
+from teachers
+WHERE school='MIT';
+
+select floor(avg(salary))
+from teachers
+WHERE school='MIT';
+
+-- di sql kita bisa menggunakan tanda % misal untuk melihan semua dosen yang nama depanya berawalan "Sam" kaya data yang mengandung kata gituteachers
+-- hanya karakter sam saja berikutnya terserah, atau %sam% yang ada di sana ada sam nya, atau %sam berarti yg di belakang sam awalnya acak
+select *
+from teachers
+where first_name like 'Sam%';
+
+select *
+from teachers
+where first_name like '%Sam%';
+
+-- menampilkan yang ada huruf e di namanya
+select *
+from teachers
+where first_name like '%e%';
+
+-- melihat jumlah dosen di setip universitasteachers
+SELECT school, COUNT(teachers.id)
+FROM teachers
+GROUP by school
+
+-- melihat salary tertinggi di setiap univteachers
+SELECT school, max(salary)
+from teachers
+GROUP by school
+
+-- melihat avgsalary  di setiap univteachers
+SELECT school, AVG(salary)
+from teachers
+GROUP by school
+
+-- versi ribertteachers
+SELECT school, floor(avg(salary)) as 'Rata-rrata Gaji'
+FROM teachers
+GROUP BY school
+ORDER by avg(salary) desc;
+
+-- melihat dosen yang memiliki salary tertinggi di cambridge 
+SELECT *
+FROM teachers
+WHERE school='Cambridge University' and salary=(
+	SELECT min(salary)
+	FROM teachers
+	where school = 'Cambridge University');
+    
+-- ini menggunakal like    
+SELECT *
+FROM teachers
+WHERE school like'Cambr%' and salary=(
+	SELECT min(salary)
+	FROM teachers
+	where school like 'Cambr%');
+    
+    
+-- menampilkan setiap dosen yang mempunyai gaji tertinggi di setiap univ
+select id, first_name, last_name, school, salary
+from teachers
+WHERE (school, salary) in (
+  SELECT school, MAx(salary)
+  FROM teachers
+  GROUP by school);
+  
+  
+-- bisa juga ada syntac yg kurang tepat misal 2 org tapi cuma 1 yg munculteachers
+
+SELECT id, first_name, last_name, school, max(salary)
+FROM teachers
+GROUP By school
+
+-- melihat dosen apa mengajar apateachers
+-- teacher.id karena kita melihat id di dalam teachersteachers
+-- kalo teachers_id id dosen yg mengajar mk itu
+SELECT *
+from teachers
+join courses on teachers.id=courses.teachers_id;
+
+
+-- menghitung jumlah MK yang di ajarkan oleh para dosenteachers
+SELECT teachers.id, teachers.first_name, teachers.last_name, count(courses.id)as total_MK
+FROM teachers
+JOIN courses on teachers.id=courses.teachers_id
+GROUP by teachers.id;
+
+-- menghitung jumlah total student masing" dosenteachers
+SELECT teachers.id, teachers.first_name, teachers.last_name, teachers.school ,sum(courses.total_students)as total_student
+FROM teachers
+JOIN courses on teachers.id=courses.teachers_id
+GROUP by teachers.id
+order by total_student desc;
+
+-- menampilkanid doesn yang genapteachers
+select *
+from teachers
+WHERE mod (id,2)=0;
+
+
+-- menampilkanid doesn yang ganjil
+select *
+from teachers
+WHERE mod (id,2)=1;
+
+
+
+

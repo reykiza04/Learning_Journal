@@ -1,0 +1,6 @@
+analisis pertanyaanya dio suruh jelasin termasuk penilaian dan pertanyaan berdasarkan datanya apa yang bisa di jelasin
+
+kalo sudah dapet vektor 1010100101000000 itu aman
+
+
+cara membedakan vektor dan eigen value gimana ya?
