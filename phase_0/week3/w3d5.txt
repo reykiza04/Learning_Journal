@@ -1,0 +1,178 @@
+w3d5
+
+bisnis knowledge !
+DS akan di apakai oleh perusdahaan jadi harus tau core bisnis
+
+setiap perusahaan berbeda bisnis core nyajadi apa yang akan kita ulik >?
+
+
+
+KONSEP DASAR BISNIS-
+kebanyakan di perusahaan digital
+
+nanti ada presentasi studi kasus per kelompok
+
+# Basic bisnis concept
+dalam sebuah bisnis pastinya ingin mencari **profit**
+- meningkatkan keuntungan sebesar besarnya
+- menekan cost sebesar besarnya
+
+
+- keuntungan berasal dari penjualan baik jasa maupun penjualan
+	- CAPEX (modal invest awal) - gedung sarana
+	- OPEX (oprasional harian) - gaji, listrik bahan baku
+
+- untuk mengurangi cost kita harus mengurangi hal ini
+
+DS Bisa masuk divisi perusahaan
+tpi nanti di bagi menjadi
+revenue maximization
+	- produk - hal apa yg di jual
+		DS di RnD, Dev, Maintance
+			perannya 
+				- mencari produk apa yg bs di jual (buat yg baru sesuai dengan situasi pasar) riset apa yg di butuhkan pasar **GOOGLE TRENDS**
+				- enchan produk yg ada (memaksimalkan resep produk misalnya)/ di pertamina misalnya banyak maintenance alat secara berkala dg mengukur getaran alat jadi tau masih bagus atau engga
+					DS-BS berperan membuat alat melihat getaran alat dg cara membandingkan pemeriksaan awal dan akhir
+	- marketing - cara jual
+		A/B testing masuk kesini
+		bertugas bagaiman menjual
+		PERAN DS 
+			Optimisasi marketing chanels (pengen iklan produk via apa saja yang paling ok?) A/B test bandingkan misal IG dan Tiktok (selebgram vs tiktok live) tes pasar, lihat juga jangka panjang dan jangka pendek
+			Pricing n discount optimization (gratis ini itu di toko)- kita pengen pelanggan royal mendapatkan diskon besar (shopee)
+				cluster customer sesuaikan promosi sesuai dengan mereka 
+cost minimazing
+PB	- produksi
+		optimisasi karyawan , produksi, mencari bahan baku termurah
+		UI UX researcher bisa juga di DS, warna tombol, posisi tombol
+		autonomus defective product detection (prediksi)
+PB	- Customer Service
+		optimisasi SDM (pake chatbot) menjawab pertanyaan basic
+		menelpon penawran (pelanggan potensial saja)
+	- produk (cost produksi)
+	- hrd
+
+
+
+OKRs and KPIs
+
+OKR - Visi - tujuan
+
+KPI - Misi - cara
+
+
+visi- mencapai penjualan 1000 pcs-
+misi - produksi 10000 pcs -
+
+jadi berapa persen produk bisa terjual
+misal ya harus mencapai 10% dari produksi harus terjual
+misal target jual 1000, harus ada 10.000 org yg melihat produk
+
+harus bisa terukur dari segi waktu dan target
+
+DS mungkin menevaluasi KPI dari dept berkaitan
+
+
+===========================================================
+
+Conversion Funnel - Lead & Conversion Rate
+FUNNEL
+- misa proses belanja
+	buka aplikasi
+	cari barang
+	klik barang
+	masuk keranjang
+	bayar
+	barang di kirim
+	barang di terima
+	uang di terima penjual
+
+misal dari aplikasi bisa di lihat penyempitan proses dari awal ke ujung ( jumlah orang )
+optimisasi disini bisa di lakukan kenapa bisa terjadi 
+
+Conversion
+melihat dari setp ini berapa persen yang sampai di step berikutnya
+
+============================================================================================================
+Churn Rate ( melihat berapa banyak pelanggan loss )
+	produk kita ngangenin ga sih , sustain ga sih 
+
+customer awal periode / customer di akhir periode
+
+
+=============================================================================================================
+Customer retention
+
+untuk mengukur royalitas pelanggan
+
+kalo pelanggan loyal, kita jual produk baru setidaknya mereka aka beli 1x
+kalo sudah punya pelanggan setia dia akan merekomendasikan ke orang lain
+
+melihat produk jg bs dari review nya
+
+
+produk di bikin cepet rusak agar kita harus beli baru
+biar kelangsungan perusaan
+
+================================================================================================================
+
+Gross Merchandise Value
+
+berapa banyak uang yang masuk ke kita
+seberapa valuable perusahan kita
+biasanya untuk mengukur perusaaan ecommers agar menarik investor
+
+dalam 1 bulan ad 100 produk terjua
+masing" harganya 5ribu
+berarti ada 500ribu 
+
+MENGUKUR GMV menjadi acuan tes kerja jg
+
+uang yang mengalir di produk tersebut saja
+misal dari pelanggan ke penjual
+
+(uang ini jg bisa di pakai ooleh perusahaan) karena blm tentu langsung di ambil oleh penjual
+bisa sebagaimodal investasi
+
+
+
+
+==================================================================================================================
+Determine business goals
+langkah memframing busines goals
+1. harus tau problem
+	dari detail yang ada kita susun pertanyaan 
+	misal masalagh penjualan menurun ( penjualan apa?, dimana saja?, kapan? siapa terlibat, siapa targetnya 5w1h dapet problem solving nya)
+maunya apa? 
+terus menentukan apa yang bisa kita bantu
+A/B testing
+clustering customers
+
+
+
+menemukan hal apa yang bisa kita lakukan untuk mencapai busines goals
+
+------------------------
+misal untuk planogram toko
+------------------------
+membandingkan penjualan dengan strategi lama dan strategi baru
+----------------------------------------------------------------------------------------------------------------------------
+
+end
+
+bikin kelompok
+ak kelompok 4
+anggota
+Kelompok 4:Kelompok 4:- Edo- Judan- Kevin Boy- Luthfi- Puput- Reyki
+
+
+case ganjil
+- uda bikin segmentasi , strategi promosi apa yang akan di rekomendasikan ke divisi marketing
+
+case genap
+- perusaahaan kita mau expand perusahaan ke USA, kasi rekomendasi tepat atau tidak kalau ke amerika, berdasarkan data penjualan
+kalo tepat kenapa, ga tepat kenapa, bikin ppt 
+max 1 kelompok 7 menit
+
+
+teentukan solusi masing" problem ke stakeholders
+

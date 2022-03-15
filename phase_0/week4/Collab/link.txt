@@ -1,0 +1,36 @@
+jenis chart: https://python-graph-gallery.com/10-barplot-with-number-of-observation
+https://colab.research.google.com/drive/1PwsdgmMTU2BBJ2UcitkFhPZZ1y95xGGU?usp=sharing
+https://github.com/fahmimnalfrzki/ds-masterclass-h8-vol2/blob/main/Visualisasi%20Data%20dan%20Data%20Storytelling.ipynb kiat kiat menampilkan data
+http://data.insideairbnb.com/united-states/ny/new-york-city/2021-11-02/visualisations/listings.csv dara h2
+
+
+
+MILESTONE project 
+dataset penjualan supermarket di nyanmar
+- membuat streamilt
+- akan di deploy ke aplikasi heroku
+- dashboard terdiri dari 2 halaman
+
+- visualisasi dan hipotesis testing
+
+- masing" kriteria
+
+		-visualisasi minimal ada 4 grafik yg berbeda (data atau informasi yang berbeda)
+			misal cabang yg palin gber uang, tren penjualan perhari, customer yg datang
+		jenis plot bebas tapi harus ada 4 figur
+		- harus interaktif bisa berkaitan dengan steamlimt
+
+	- hipo testing
+		- membuat 1 hipotesis, terserah pake apa
+		- definisikan h0 dan ha
+		- tulis proses dan hasil analisanya
+		- uji test pake apa
+		- kesimpulan apa
+		- kalo pake grafik tuliskan grafiknya
+		- cleaning dan preposing di notebook, kumpulkasn di repo git
+
+deploy url harus di buat sesuai format
+dashboard akan di persentasikan pada hari senin, untuk yg lulus kok serem
+
+
+hipotestis testing

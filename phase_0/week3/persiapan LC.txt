@@ -1,0 +1,54 @@
+LC3 dan GC3
+untuk ujian
+pas statistical statistic
+tentang central tendensi
+outlier
+
+https://github.com/codebasics/py/tree/master/ML/FeatureEngineering
+
+
+kalo normal bisa pakai z score
+kalo tidak normal IQR
+
+standar deviasi, 
+central tendensi
+mean median mod,
+
+ada beberapa klom misl di suruh cek kolom a
+
+bisa coba cek nilai mean median mod
+
+hipotetis testing A/B test
+
+single sample, 
+P0w3d3
+
+ketika harus bikin hipotesis 
+sample dan populasi
+apakah rata"dari income dia itu lebih kecil dari samadengan 500, 
+h0 dan h1 berlawanan
+
+h0 <=
+h1 >
+
+alurnya paling buat statement -> h1 -> h0
+
+
+
+ada single sample ada yangtwo sample
+
+1 sampel berarti, sampel vs populasi
+2 sampel berarti sampel vs sampel 
+
+LC
+================================================
+
+GC
+
+statistika deskriptif
+
+kerjain dulu GC biar bisa LC !
+
+
+
+
