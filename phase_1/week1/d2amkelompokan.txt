@@ -1,0 +1,45 @@
+https://www.youtube.com/watch?v=ikKfP7KbZW4
+
+https://www.youtube.com/watch?v=5bx3ccjSxro
+
+
+ imputation
+ handling outliers
+ binning
+ log transform
+ -one hot encoding
+ feature split
+ -scaling
+ grouping operation
+ feature split
+ extrating date
+ deriving new features
+
+ipynb, amazon sagemaker, aws glue (etl job)
+
+
+
+wht is FE, transform raw data to features/columns
+ it improve accuraty
+
+1. fatia, ilyas, wicaksono, anita, rizky, dafa -> Feature Engineering
+2. cindra, sony, reyki, krismanto, izzudin -> missing values
+3. -> outliers
+4. -> cardinality
+
+
+
+
+Jumlah Missing Value di sebuah Variable kecil 
+
+Kecil kemungkinan berdampak besar pada Variable
+
+Memperlakukan secara khusus hanya akan menambah noise pada Variable
+
+Gantilah dengan Mean atau Random Sample untuk menjaga distribusi Variable
+
+Kalau hasil prediksinya tidak normal
+
+Missing Value yang kecil itu mengandung data informatif
+
+Cek Kembali

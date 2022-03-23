@@ -1,0 +1,77 @@
+biasanya di tuliskan dulu data problem yang ada misal NGC1 tentang struk , apa aja yang mempengaruhi struk
+
+misalkan terpengaruhi 
+
+dari fakta yang di kumpulkan baru di gabungkan dengan data set, kalo ada kolom yang tidak terpengaruh
+misal after meried (ini tidak terpengaruh di buktikan di EDA bener ga, bisa jadi dataset ini adalah sample dari dataset yg besar yang di open ke public
+
+yang publish melakukan query terlebih dahulu 
+
+fiture dg fiture
+
+atau fitur dengan target
+
+
+kalo di eda terbukti tidak ada bukti kita bisa melakukan personal judgemnt, jadi bukan sekedar fealing
+
+jadi korelasi antar feature untuk melihat keterkaitan data
+jadi pas spliting data pas train set di cek lagi
+
+
+bisa jadi pas randomset ny beda nilai korelasiny beda
+
+untuk feature selection itu
+sebelum scaling'
+
+
+
+setelah di split di cek ulang korelasi yang terjadi
+
+-ID tidak menunjukan apapun jadi boleh di drop? 
+boleh cuma yg perlu di ingat drop sebelum split
+drop yg nilainya sama untuk semua baris
+atau variansi = 0, jadi ini percuma untuk di lakukan modeling
+
+sekalikan di masukan ke dalam model tidak ada pengaruhnya
+
+variansiny terlalu besar (ID) boleh di drop sblm split, 
+
+
+
+===================================================================================
+
+scallar-  kapan pakai ini kapan pakai itu
+
+
+F. SCALING
+ada 3
+
+Standar scaler
+	- column normal distribution
+	- skew jg bisa tapi hanya untuk yang berdistrinormal modelnya contohnya liniar regresion dan logistik regresion, PCA(sebenarnya gada literaturnya tapi dalam eksperimen standar scaler lebih baik daripada minmax)	
+
+Min max
+	- kolom skew
+
+
+Robust
+	-outlier banyak tapi kita ga bole handling outlier ( di atas 15% outliernya )
+
+
+
+model jg di buat trial dan eror, sekalipun dartanya skew, kita masih menggunakan minmax(skew), kalo make standar scaler tetap di gunakan
+
+scaler bisa +-
+minmax defaultny 0-1
+
+
+mungkina da beberapa model yang di lakukan standar scaler justru ga masuk akal kolomnya akan menjadi negatif
+
+
+nanti di dunia kerja akan ada alogritma yang tumpang tindih nantinya
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+https://www.analyticsvidhya.com/blog/2021/05/5-regression-algorithms-you-should-know-introductory-guide/#:~:text=In%20Machine%20Learning%2C%20we%20use,as%20a%20continuous%20numerical%20value.
+https://towardsdatascience.com/model-parameters-and-hyperparameters-in-machine-learning-what-is-the-difference-702d30970f6
+
+ 

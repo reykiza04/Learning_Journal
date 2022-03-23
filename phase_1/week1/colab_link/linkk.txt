@@ -1,0 +1,114 @@
+https://colab.research.google.com/drive/1jxg5QYBJJuAggnXLwXjy5qhvTOe-_Dxb?usp=sharing
+https://github.com/afifai/mlfs
+
+
+mentoring rabu 16  maret, weekly
+
+DS
+
+EDA
+
+Cardinality - di ijinkan menggunakan seluruh datasheet
+=train-set= | test set
+h. outlier | pengen melihat di original datanya yang mana berbeda dari rata"ny
+h. Misval | kalo misaval dulu nanti parameternya berubah (bisa fit transfrom)
+f. selection 
+f. scaling/ encoding
+modeling
+
+alur gitu agar model lebih valid
+----------------------------------
+=test set=inference set
+h outlier - > triming dan capping, jika di lakukan akan mempengaruhi nilai akhir jadi tidak di handling agar masih pure dengan nilai maksimu data
+	sometimes kalo ga di handling nilainya akan jauh, tp tergantung prefensi di pake atau engga
+h. missing value ( menggunakan transfom saja)
+f. scaling / encoding
+predic
+
+tidak menutup kemungkinan ini akan berulang jika dirasakan model yang di dapat tidak perfome dg baik
+
+
+missval ada yg UNIK, ada yg kosong ada yang NULL, atau bisa di tulis dengan bilangan yg aneh 999 atau | -999, jika begini rubah ke nan ( ini di awalll banget enaknya)
+
+cardinal tidak hanya merubah tapi mentransform -> dari 9 jadi 3 misal merubah ke klasifikasi lanjutan
+makanya CARDINALITY HARUS DI AWAL agar data yg masuk ke test dan train
+
+=skalar adalah numerik dan bisa di bandingkan
+=ordinal bisa di kelompokan misal 1-6 1,2 low| 3,4 med | 5,6 high
+=feature creation atau grupkan lagi dari variasi kolom misal ke tmpt asalnya dari masing" value (asia eropa amerika)
+
+di otak atik menggunakan nilai dari TRAIN SET
+-----------------------------------------------------------------------
+feature selection di akhir jg ini aliran, tapi jika di awal nanti ada kebocoran data, 
+
+
+
+
+==============handling outlier=============hanya ada di train set
+--cek distribusi data jangan via visual agar lebih valid menggunakan sebuah nilai
+-0.5 ~ 0.5 = normal distribusion
+di luar akan menjadi skew
+, bisa di gunakan
+PANDAS.SKEW()
+-- cek jumlah outlier
+-jgn box plot (hanya valid untuk skeew)
+-kalo normal make z-score => mean +- 3 standar deviasi
+-skew menggunakan IQR =>	 q1 - 1,5 iqr(1,5 itu terllau banyak) besaranya bisa dirubah jadi 3 +- (handling ga terlalu banyak +-3)
+				 q3 + 1,5 iqr
+
+---h outlier
+- <5%: trim \remove
+- 5-15% : capping
+- > 15% di biarkan
+
+
+
+
+
+triming harus di liat indexnya
+
+cek distribusi cek skew juga gapapa
+
+
+
+
+
+MCAR: bebas - independent -> mean median mode
+	misal tidak terisi nama belakang (bisa di isi dengan modus?) agar medianya tidak berubah dan tidak terkait dengan yg lain
+MAR: missing val yg bisa di jelaskan oleh existing data
+	misal value ini akan ada jika data sebelumnya ada (di jelaskan oleh data lain) beda tipe yg datanya bisa ada isi atau engga
+MNAR: datanya tidak tersedia
+	misal datanya benar" kosong kosong di awal dan akan kosong semua kedepan (misal dia ga datang
+
+untuk sisanya mean median 0/1
+
+======================handling misval================
+
+1. cek distribusi data
+2. cek mcar/mar/mnar
+3. imputasi : =>replace (0/1) >5% (replace hanya dari xtrain
+		trim <5%
+tapi........ jarang di trim karena akan kehilangan resources
+
+
+phase 1 LC ad kasus tapi pake algoritma yg berbeda saja
+
+
+
+Handling Missing Value
+cek jenis missing value
+MCAR : Bebas / Independent (sebuah missing value tidak terkait dengan data apapun)
+MAR : Missing value yang bisa dijelaskan oleh existing data
+MNAR : Missing value yang bisa dijelaskan oleh non existing data
+
+MCAR di kolom categorical, di handling pake modus, beres
+    distribusi normal pake mean
+    distribusi skew pake median
+MAR 
+    distribusi normal pake mean 
+    distribusi skew pake median
+    + pembuatan kolom baru (kolom missing value (1/0)), dimana isinya kalau datanya ada diisi 1 kalau datanya missing diisi 0 
+MNAR
+    distribusi normal pake mean 
+    distribusi skew pake median
+    + pembuatan kolom baru (kolom missing value (1/0)), dimana isinya kalau datanya ada diisi 1 kalau datanya missing diisi 0

@@ -1,0 +1,16 @@
+decision tree -> cenderung over fitting
+berbatis tree biasanya overfit
+
+
+Ensamble learning untuk apa>? sekumpulan model
+voting termasuk ensamble learning
+hard -> voting kesamaan output 
+soft -> berdasarkan probabilitas
+
+ensamble ada 3
+1.stacking -> voting dll
+	- ikut mayorutas
+2.seqensual ensemble (boosting)
+	-secara berurutan pengerjaanya, kerjain 1 model lanjut ke model berikutnya dst, di ulang sampai selesai dan dilihat mayoritas
+3.palalel  ensamble  (bagging)
+	-
