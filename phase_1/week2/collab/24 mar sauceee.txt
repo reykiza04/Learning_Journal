@@ -4,3 +4,7 @@ Google Colab : https://colab.research.google.com/drive/1RAgx0jmunmAQ73wGkjmvLq_t
 
 
 https://gist.github.com/ksv-muralidhar/f5e3384c1c6f7a26dcb50b5965f6f367
+
+
+over fit -> train lebih besar dari tes
+under fit -> train lebih kecil dari tes
