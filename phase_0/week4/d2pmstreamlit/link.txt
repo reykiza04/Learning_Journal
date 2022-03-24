@@ -1,0 +1,9 @@
+https://stackoverflow.com/questions/40532825/systemerror-initialization-of-qtcore-failed-without-raising-an-exception
+https://docs.streamlit.io/library/api-reference
+https://share.streamlit.io/daniellewisdl/streamlit-cheat-sheet/app.py
+
+
+bisa pake ctrl + H ternyata buat find and replace wkwkwk
+replace all tinggal ctrl+alt+enter
+
+replace all di vsc

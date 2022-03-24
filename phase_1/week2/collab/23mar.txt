@@ -1,0 +1,114 @@
+mentoring 23 maret 2022
+
+LC 1>/?
+
+pip feature enggine
+
+ada yang numeric tapi string makanya cek tipe data
+
+sblm di split hanya bole di cek tapi belum teneu handling
+
+cardinality sblmsplitt
+
+jika gap discribe sangat jauh asumsi akan ada outlier
+
+-----------------------------------------------------
+
+ENSAMBEL
+
+Random forest
+
+
+perbedaannya random forest (bagging) sama sama voting stacking (voting) cuma beda di jenis modelnya
+
+cek tipe data kolom 
+ bisa jdi kolom numerik asliknya category
+ 
+cek kode saham unik, beseerta jumlahnya
+
+gruping berdasarkan jumlah saham
+
+pecah pecah kolom yang cardinalitasnya terlalu tinggi
+
+cardinality boleh dilakukan sebelum split
+
+ambil sampel untuk inference
+
+split data
+
+pecah numeric dan categorical
+
+cek distribusi
+
+data skew
+
+handlin outlier
+
+seing oulier with boxplot only valid if data distribution skewed
+
+di dunia saham, outlier di date di abaikan
+
+handling misvaal
+
+gada misval
+
+feature selection
+
+one hot buaat yang tidak bisaa dibandingkan, di case saham symbol paakai one hot
+
+model evaluasi, tidak hanyaa nampilin metric
+ngasi tau jugaa informasi yaang bisa diterim user (non daata science)
+
+
+dari describe bisa buat cek outlier
+
+kalau jark 75% sama max kalau kejauhaan kemungkinan ada outlier
+
+kalaau cek korelasi
+
+kalau ada yg ga punya nilai korelasi gaa aaada, artinya variansi 0 (cuma punya 1 uniq vaalue), std 0
+nanti dihapus
+
+korelasi neegtif boleh dipaakaai kalau nilainya tinggi, (jauh dr 0), ataau ga dipake gpp
+
+
+recall dipake untuk meminimalkan false negatif : 
+
+clasifikasi
+
+0 = 83% (mampu bayar)
+1 = 17% (gagal bayar)
+
+recall : nilai akaan tinggi, kalau false negatif(FN) kecil (FN = diprediksi negatif, realita positif)
+precision : nilai akan tinggi, kaalau false positif (FP) kecil (FP = diprediksi positif, relaita negatif)
+
+meminimalkan FN recall
+meminimalkan FP precision
+
+alasasn tidak memahami domain : f1score
+
+pemodelaan dimana targetnyaa kita isi dengan sebuah nilai, hasilnya tidak vaalid, di drop aaja kalu aadaa misval di target model
+
+randomforestclassifier
+
+hyperparameter
+n_estimator (default = 100)
+
+bikin 100 decision tree (DT)
+
+setiap DT ngambil dari train set
+
+setiaap baaris bisa muncul di beberapa DT
+
+karena DT mengaambil dari train set dengan pengembalian
+
+setiap DT menghasilkaan 1 model
+
+kemudian menghasilkan 100 prediksi
+dari 100 prediksi di voting
+
+
+kalau regresi
+dari 100 prediksi di jumlah / dibagi 100 (mean)
+
+DT sifatnya low bias / high variaance

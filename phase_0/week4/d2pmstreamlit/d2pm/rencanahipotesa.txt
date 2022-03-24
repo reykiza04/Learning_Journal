@@ -1,0 +1,49 @@
+kebiasaan belanja member dan non member (mean)
+h0 Member belanja >= Non member belanja
+h1 Member belanja < Non member belanja
+
+kebiasaan belanja pria dan wanita (lebih suka barang apa)
+h0 Pria belanja Food and beveragages <= Wanita belanja Food and beveragages
+h1 Pria belanja Food and beveragages > Wanita belanja Food and beveragages
+
+menggunakan ANOVA sales cabang a b c 
+
+
+nominal penjualan metode mana yang paling sering di gunakan ANOVA
+
+
+
+data supermarket merupakan sample record penjualan 3 cabang yang berbeda selama 3 bulan
+January 2019 to March 2019
+(10am to 9pm)
+Cash, Credit card and Ewallet
+
+COGS harga total after tax
+
+https://github.com/H8-Assignments-Bay/p0---ftds009---ml1-reykiza04https://github.com/H8-Assignments-Bay/p0---ftds009---ml1-reykiza04
+refrens
+https://www.kaggle.com/khaiid/99-will-you-get-a-good-customer-rating
+https://www.kaggle.com/marcin88pl/supermarket-sales-analysis
+https://www.kaggle.com/mahmoudeldesuky/valuable-insights-for-a-huge-supermarket
+https://www.kaggle.com/mahmoudeldesuky/sales-analysis
+https://www.kaggle.com/mahmoudeldesuky/sales-analysis
+https://www.kaggle.com/pedropiceni/data-analysis-to-help-business-decisions
+https://www.kaggle.com/samawel97/supermarket-sales-analysis-visualisation
+https://www.kaggle.com/m26102002/super-market-sales-visualization-using-plotly
+
+
+
+
+pada hero
+Visualisasi
+
+- Customers data
+- Product line per customer
+- Payment Methode per customer
+
+
+
+
+
+
+
